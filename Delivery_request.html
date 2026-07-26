@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Request – Village Market Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">🌾 Village <span>Market Hub</span></a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="seller.html">Sell with Us</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="delivery.html" class="active">Delivery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Delivery Request</h2>
+    <p class="section-sub">Request delivery for your order or pick-up from the village hub</p>
+
+    <div class="form-container">
+      <div class="success-msg">Delivery request submitted! (Demo only – no data is saved)</div>
+      <form id="deliveryForm">
+        <div class="form-group">
+          <label for="delName">Your Name *</label>
+          <input type="text" id="delName" name="delName" required placeholder="Full name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="delPhone">Phone *</label>
+            <input type="tel" id="delPhone" name="delPhone" required placeholder="10-digit mobile">
+          </div>
+          <div class="form-group">
+            <label for="orderId">Order Reference (optional)</label>
+            <input type="text" id="orderId" name="orderId" placeholder="If you already ordered">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="delType">Delivery Type *</label>
+          <select id="delType" name="delType" required>
+            <option value="">-- Select --</option>
+            <option value="home">Home Delivery</option>
+            <option value="pickup">Self Pickup from Hub</option>
+            <option value="nearby">Drop at Nearby Point</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="delAddress">Full Address / Pickup Point *</label>
+          <textarea id="delAddress" name="delAddress" required placeholder="Complete address or preferred pickup location"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="preferredDate">Preferred Date</label>
+          <input type="date" id="preferredDate" name="preferredDate">
+        </div>
+        <div class="form-group">
+          <label for="delNotes">Additional Notes</label>
+          <input type="text" id="delNotes" name="delNotes" placeholder="Any special instruction">
+        </div>
+        <button type="submit" class="btn" style="width:100%;">Submit Delivery Request</button>
+        <p class="form-note">This is a front-end demo. No real request is sent.</p>
+      </form>
+    </div>
+
+    <h3 class="section-title" style="margin-top:2.5rem;">Our Village Hub Location</h3>
+    <p class="section-sub">Find the main collection & pickup point on the map</p>
+    <div class="map-box">
+      <!-- Google Maps embed – sample rural/village location (can be changed) -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15080.0!2d73.8567!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzEzLjQiTiA3M8KwNTEnMjQuMSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Village Market Hub Location">
+      </iframe>
+    </div>
+    <p style="text-align:center;margin-top:0.8rem;color:#666;font-size:0.9rem;">
+      (Demo map – replace with your actual village coordinates if needed)
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Village Market Hub | College Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
